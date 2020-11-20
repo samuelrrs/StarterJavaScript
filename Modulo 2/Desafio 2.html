@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar quadrados e circulos</title>
+  </head>
+  <body>
+    <button class="botao" id="btnCriar" onClick="criaQuadrado()">
+      Gerar novo
+    </button>
+
+    <div id="app"></div>
+
+    <script>
+      var btnNovo = document.querySelector("#btnCriar");
+      btnNovo.style.backgroundColor = "#7159c1";
+
+      function criaQuadrado() {
+        let criaQuadrado = document.createElement("div");
+        criaQuadrado.style.backgroundColor = "#7159c1";
+        criaQuadrado.style.width = "180px";
+        criaQuadrado.style.height = "180px";
+        criaQuadrado.style.margin = "10px";
+
+        criaQuadrado.classList.add("box");
+
+        document.body.appendChild(criaQuadrado);
+
+        var corNova = document.querySelector(".box");
+
+        corNova.addEventListener("mouseover", function corAleatoria() {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          criaQuadrado.style.backgroundColor = color;
+        });
+      }
+    </script>
+  </body>
+</html>
