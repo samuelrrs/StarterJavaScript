@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de manipulara DOM</title>
+  </head>
+  <body>
+
+    <div>
+
+        <input type="text" name="input1">
+        <button id="botao1">Não me clique</button>
+
+
+
+    </div>
+
+    <script>
+        
+
+var inputText = document.querySelector('input[name=input1]')
+var btnElement = document.querySelector('button#botao1')
+
+btnElement.onclick = function () {
+    var inputValue = inputText.value
+
+    alert(inputValue)
+}
+
+
+
+
+
+    </script>
+  </body>
+</html>
