@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio Modulo 2</title>
+  </head>
+  <body>
+    <ul></ul>
+    <input type="text" name="nome" required/>
+    <button  onClick="adicionar()">Add</button>
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      var listaElement = document.querySelector("ul");
+      var inputElement = document.querySelector("input");
+
+      function addItem(texto) {
+        var liElment = document.createElement("li");
+        var textElement = document.createTextNode(texto);
+
+        liElment.appendChild(textElement);
+        listaElement.appendChild(liElment);
+      }
+
+      function adicionar() {
+        addItem(inputElement.value);
+        inputElement.value = "";
+      }
+
+      for (nome of nomes) {
+        addItem(nome);
+      }
+    </script>
+  </body>
+</html>
