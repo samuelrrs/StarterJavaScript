@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo appendChild</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul></ul>
+      <input type="text">
+    </div>
+
+    <script>
+      var alunos = ["Samuel", "Ribeiro", "Rufino"];
+      var listarAlunos = document.querySelector("#app ul");
+
+      function renderAlunos() {
+        for (var aluno of alunos) {
+          var itemAluno =  document.createElement('li')
+          var alunoText = document.createTextNode(aluno);
+
+          itemAluno.appendChild(alunoText);
+          listarAlunos.appendChild(alunoText);
+        }
+      }
+
+      renderAlunos();
+    </script>
+  </body>
+</html>
