@@ -1,7 +1,7 @@
-//import axios para estar realizando os exercícios 
+
 import axios from 'axios';
 
-//1.1
+
 const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
 const umPorSegundo = async () => {
     await delay(console.log('1s'));
@@ -11,7 +11,6 @@ const umPorSegundo = async () => {
 umPorSegundo();
 
 
-//1.2
 const getUserFromGithub = async (user) => {
     try {
         const response = await axios.get(`https://api.github.com/users/${user}`);
@@ -20,11 +19,11 @@ const getUserFromGithub = async (user) => {
         console.log('Usúario não existe');
     }
 }
-getUserFromGithub('joaooliveiradev');
+getUserFromGithub('samuelrrs');
 
 
 
-//1.3
+
 class Github {
     static async getRepositories(repo) {
         try {
@@ -39,7 +38,7 @@ Github.getRepositories('joaooliveiradev/starter-rocketseat-javascriptES6');
 
 
 
-//1.4
+
 const buscaUsuario = async usuario => {
     try {
         const responseUsuario = await axios.get(`https://api.github.com/users/${usuario}`);

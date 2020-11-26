@@ -1,4 +1,3 @@
-//5.1 Rest
 
 const arr = [1, 2, 3, 4, 5, 6]
 
@@ -8,8 +7,6 @@ function soma(...params) {
     return params.reduce((a, b) => a + b);
 }
 
-
-//5.2 Spread
 
 const usuario = {
     nome: 'Diego',
